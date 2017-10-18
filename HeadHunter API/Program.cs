@@ -11,9 +11,8 @@
     internal class Program
     {
         private static readonly Action<string> Log = Console.WriteLine;
-        private static void Main() => MainAsync().Wait();
 
-        private static async Task MainAsync()
+        private static async Task Main()
         {
             var config = JsonConvert.DeserializeObject<Config>(File.ReadAllText("Config.json"));
 
